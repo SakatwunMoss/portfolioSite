@@ -1,0 +1,17 @@
+name = "sakatwun-portfolio"
+compatibility_date = "2026-08-30"
+
+# カスタムドメイン（DNS が Cloudflare を向いている必要あり）
+[[routes]]
+pattern = "sakatwun.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.sakatwun.com"
+custom_domain = true
+
+# Next.js static export (out/) を Workers Static Assets として配信
+[assets]
+directory = "./out"
+not_found_handling = "404-page"
+html_handling = "auto-trailing-slash"
