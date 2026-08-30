@@ -29,7 +29,7 @@ export const works: Work[] = [
     description:
       "ラーメン店の情報を比較・検索できるサイト。Cloudflare Workers（OpenNext）とD1を使ったエッジ構成で運用しています。",
     url: "https://ramen-compare.com/",
-    imageUrl: "https://ramen-compare.com/og-default.png",
+    imageUrl: "https://ramen-compare.com/opengraph-image.png",
     tags: ["Next.js", "Cloudflare Workers (OpenNext)", "D1"],
   },
 ];
