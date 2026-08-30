@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
 import { siteConfig } from "@/lib/site";
@@ -19,26 +18,18 @@ export default function AboutPage() {
         description="音楽制作とWeb開発を軸に活動しています。"
       />
 
-      <div className="grid gap-10 md:grid-cols-[200px_1fr] md:items-start">
-        <div className="flex justify-center md:justify-start">
-          <Image
-            src="/images/avatar.png"
-            alt={siteConfig.author.name}
-            width={180}
-            height={180}
-            className="rounded-full ring-4 ring-pink/30 shadow-lg"
-          />
-        </div>
-
-        <div>
-          <h3 className="text-2xl font-semibold text-ink">
-            {siteConfig.author.name}
-          </h3>
-          <p className="mt-1 text-sage-dark">{siteConfig.author.role}</p>
-          <p className="mt-6 leading-relaxed text-ink-muted">
-            {siteConfig.author.bio}
-          </p>
-        </div>
+      <div>
+        <h3 className="text-2xl font-semibold text-ink">
+          {siteConfig.author.name}
+        </h3>
+        <p className="mt-2 text-sm text-ink-muted">
+          Also known as{" "}
+          {siteConfig.author.alsoKnownAs.join(", ")}
+        </p>
+        <p className="mt-1 text-sage-dark">{siteConfig.author.role}</p>
+        <p className="mt-6 max-w-2xl leading-relaxed text-ink-muted">
+          {siteConfig.author.bio}
+        </p>
       </div>
 
       <section className="mt-16">

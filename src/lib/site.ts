@@ -7,6 +7,7 @@ export const siteConfig = {
   xUrl: process.env.NEXT_PUBLIC_X_URL ?? "https://x.com/sakatwun",
   author: {
     name: "Sakatwun Da M.I.C.",
+    alsoKnownAs: ["Gahji","SAKATWUN DA GARAGE","F-ranked Demi Human","f-demi"],
     role: "Musician / Web Developer",
     bio: "音楽制作とWeb開発の両方で活動しています。配信楽曲の制作から、Next.jsを使った比較・検索サイトの開発まで、クリエイティブとテクノロジーを横断して取り組んでいます。",
   },

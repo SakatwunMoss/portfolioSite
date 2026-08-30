@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { MusicCard } from "@/components/MusicCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -12,62 +11,33 @@ export default function HomePage() {
     <>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-pink-soft/60 to-cream" />
-        <div className="relative mx-auto grid max-w-5xl gap-10 px-5 py-16 md:grid-cols-2 md:items-center md:py-24">
-          <div className="order-2 md:order-1">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sage">
-              Portfolio
-            </p>
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-ink sm:text-5xl">
-              {siteConfig.author.name}
-            </h1>
-            <p className="mt-3 text-lg text-sage-dark">
-              {siteConfig.author.role}
-            </p>
-            <p className="mt-6 max-w-md leading-relaxed text-ink-muted">
-              音楽とWeb開発の両方で活動しています。配信楽曲の制作から、Next.jsを使った比較・検索サイトの開発まで。
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/music/"
-                className="rounded-full bg-sage px-5 py-2.5 text-sm font-medium text-white transition hover:bg-sage-dark"
-              >
-                Music
-              </Link>
-              <Link
-                href="/works/"
-                className="rounded-full border border-sage/30 bg-white px-5 py-2.5 text-sm font-medium text-sage-dark transition hover:border-sage hover:bg-sage/5"
-              >
-                Works
-              </Link>
-            </div>
+        <div className="relative mx-auto max-w-5xl px-5 py-16 md:py-24">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sage">
+            Portfolio
+          </p>
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-ink sm:text-5xl">
+            {siteConfig.author.name}
+          </h1>
+          <p className="mt-3 text-lg text-sage-dark">
+            {siteConfig.author.role}
+          </p>
+          <p className="mt-6 max-w-md leading-relaxed text-ink-muted">
+            音楽とWeb開発の両方で活動しています。配信楽曲の制作から、Next.jsを使った比較・検索サイトの開発まで。
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/music/"
+              className="rounded-full bg-sage px-5 py-2.5 text-sm font-medium text-white transition hover:bg-sage-dark"
+            >
+              Music
+            </Link>
+            <Link
+              href="/works/"
+              className="rounded-full border border-sage/30 bg-white px-5 py-2.5 text-sm font-medium text-sage-dark transition hover:border-sage hover:bg-sage/5"
+            >
+              Works
+            </Link>
           </div>
-
-          <div className="order-1 flex justify-center md:order-2">
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-full bg-pink/30 blur-2xl" />
-              <Image
-                src="/images/avatar.png"
-                alt={siteConfig.author.name}
-                width={280}
-                height={280}
-                className="relative rounded-full ring-4 ring-white shadow-xl"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative mx-auto max-w-5xl px-5 pb-8">
-        <div className="overflow-hidden rounded-3xl border border-sage/15 shadow-sm">
-          <Image
-            src="/images/hero.jpg"
-            alt="Sakatwun Da Portfolio hero visual"
-            width={1200}
-            height={675}
-            className="h-auto w-full object-cover"
-            priority
-          />
         </div>
       </section>
 
