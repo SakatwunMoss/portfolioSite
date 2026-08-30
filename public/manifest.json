@@ -1,0 +1,24 @@
+{
+  "name": "Sakatwun Da Portfolio",
+  "short_name": "Sakatwun",
+  "description": "Sakatwun Da M.I.C. のポートフォリオ。楽曲制作とWeb制作の実績を紹介しています。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#6b8f71",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/avatar.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

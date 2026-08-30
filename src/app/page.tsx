@@ -1,10 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { MusicCard } from "@/components/MusicCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { WorkCard } from "@/components/WorkCard";
 import { tracks } from "@/lib/data/music";
 import { works } from "@/lib/data/works";
+import { createPageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = createPageMetadata({
+  title: `${siteConfig.author.name}｜${siteConfig.title}`,
+  description: siteConfig.description,
+  path: "/",
+});
 
 export default function HomePage() {
   return (

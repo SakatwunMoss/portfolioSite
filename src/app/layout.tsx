@@ -3,6 +3,8 @@ import { DM_Sans } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
+import { personJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -16,9 +18,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
+    template: `%s｜${siteConfig.title}`,
   },
   description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -41,6 +54,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/images/ogp.jpg"],
   },
+  other: {
+    "theme-color": siteConfig.themeColor,
+  },
 };
 
 export default function RootLayout({
@@ -51,6 +67,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${dmSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-cream text-ink">
+        <JsonLd data={personJsonLd()} />
         <GoogleAnalytics />
         <Header />
         <main className="flex-1">{children}</main>

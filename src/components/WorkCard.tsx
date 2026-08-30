@@ -8,7 +8,7 @@ export function WorkCard({ work }: { work: Work }) {
       <div className="relative aspect-[16/10] overflow-hidden bg-pink/20">
         <Image
           src={work.imageUrl}
-          alt={work.title}
+          alt={`${work.title}のスクリーンショット`}
           fill
           className="object-cover transition duration-500 group-hover:scale-[1.02]"
           sizes="(max-width: 768px) 100vw, 33vw"
@@ -35,7 +35,7 @@ export function WorkCard({ work }: { work: Work }) {
           rel="noopener noreferrer"
           className="mt-5 inline-flex items-center text-sm font-medium text-sage-dark underline-offset-4 hover:underline"
         >
-          サイトを見る →
+          {work.title}のサイトを見る →
         </Link>
       </div>
     </article>

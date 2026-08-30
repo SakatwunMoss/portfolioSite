@@ -1,27 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
+import { createPageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About",
   description:
-    "Sakatwun Da M.I.C. のプロフィール、スキルセット、お問い合わせ先を紹介しています。",
-};
+    "Sakatwun Da M.I.C.（Musician / Web Developer）のプロフィール、スキルセット、お問い合わせ先を紹介。楽曲制作とNext.jsを使ったWeb制作の両軸で活動するクリエイターの経歴と技術スタックを掲載しています。",
+  path: "/about/",
+});
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-5xl px-5 py-16">
       <SectionHeading
+        as="h1"
         label="About"
         title="プロフィール"
         description="音楽制作とWeb開発を軸に活動しています。"
       />
 
       <div>
-        <h3 className="text-2xl font-semibold text-ink">
+        <h2 className="text-2xl font-semibold text-ink">
           {siteConfig.author.name}
-        </h3>
+        </h2>
         <p className="mt-2 text-sm text-ink-muted">
           Also known as{" "}
           {siteConfig.author.alsoKnownAs.join(", ")}
@@ -33,7 +36,7 @@ export default function AboutPage() {
       </div>
 
       <section className="mt-16">
-        <h3 className="mb-4 text-lg font-semibold text-ink">スキルセット</h3>
+        <h2 className="mb-4 text-lg font-semibold text-ink">スキルセット</h2>
         <ul className="grid gap-3 sm:grid-cols-2">
           {siteConfig.skills.map((skill) => (
             <li
@@ -47,7 +50,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-16 rounded-2xl border border-sage/15 bg-pink-soft/50 p-8 text-center">
-        <h3 className="text-lg font-semibold text-ink">お問い合わせ</h3>
+        <h2 className="text-lg font-semibold text-ink">お問い合わせ</h2>
         <p className="mt-2 text-sm text-ink-muted">
           ご連絡は X（Twitter）のDMまたはリプライにてお願いします。
         </p>

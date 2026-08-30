@@ -9,7 +9,7 @@ export function MusicCard({ track }: { track: Track }) {
       <div className="flex items-start gap-4">
         <Image
           src={track.artworkUrl}
-          alt={track.titleJa}
+          alt={`${track.titleJa}のジャケット画像`}
           width={80}
           height={80}
           className="shrink-0 rounded-xl shadow-sm ring-1 ring-sage/10"
