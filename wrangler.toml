@@ -1,4 +1,4 @@
-name = "sakatwun-portfolio"
+name = "portfoliosite"
 compatibility_date = "2026-08-30"
 
 # カスタムドメイン（DNS が Cloudflare を向いている必要あり）
