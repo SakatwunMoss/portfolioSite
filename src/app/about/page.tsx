@@ -33,6 +33,9 @@ export default function AboutPage() {
         <p className="mt-6 max-w-2xl leading-relaxed text-ink-muted">
           {siteConfig.author.bio}
         </p>
+        <p className="mt-3 max-w-2xl leading-relaxed text-ink-muted">
+          {siteConfig.author.bioEn}
+        </p>
       </div>
 
       <section className="mt-16">

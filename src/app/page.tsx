@@ -32,6 +32,11 @@ export default function HomePage() {
           <p className="mt-6 max-w-md leading-relaxed text-ink-muted">
             音楽とWeb開発の両方で活動しています。配信楽曲の制作から、Next.jsを使った比較・検索サイトの開発まで。
           </p>
+          <p className="mt-3 max-w-md leading-relaxed text-ink-muted">
+            I work across both music and web development — from producing
+            released tracks to building comparison and search sites with
+            Next.js.
+          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/music/"

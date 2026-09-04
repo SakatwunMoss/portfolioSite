@@ -11,6 +11,8 @@ export const siteConfig = {
     alsoKnownAs: ["Gahji","SAKATWUN DA GARAGE","F-ranked Demi Human","f-demi"],
     role: "Musician / Web Developer",
     bio: "音楽制作とWeb開発の両方で活動しています。配信楽曲の制作から、Next.jsを使った比較・検索サイトの開発まで、クリエイティブとテクノロジーを横断して取り組んでいます。",
+    bioEn:
+      "I work across both music production and web development. From producing and releasing original tracks to building comparison and search sites with Next.js, I bridge creativity and technology in everything I do.",
   },
   nav: [
     { href: "/", label: "Home" },
