@@ -3,7 +3,11 @@ export const siteConfig = {
   title: "Sakatwun Da Portfolio",
   description:
     "Sakatwun Da M.I.C.（Musician / Web Developer）の公式ポートフォリオサイトです。nodee・LinkCoreで配信中の楽曲制作作品と、Next.js・TypeScriptを活用したWeb制作・比較検索サイトの開発実績を掲載しています。",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sakatwun.com",
+  // Canonical origin (no trailing slash). Prefer apex https without www.
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://sakatwun.com").replace(
+    /\/+$/,
+    "",
+  ),
   themeColor: "#6b8f71",
   xUrl: process.env.NEXT_PUBLIC_X_URL ?? "https://x.com/sakatwun",
   author: {

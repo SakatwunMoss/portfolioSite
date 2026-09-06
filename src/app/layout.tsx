@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
-import { personJsonLd } from "@/lib/seo";
+import { personJsonLd, siteOrigin } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -14,16 +14,17 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
+const origin = siteOrigin();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  // Relative canonical / OG paths resolve against this origin.
+  metadataBase: new URL(`${origin}/`),
   title: {
     default: siteConfig.title,
     template: `%s｜${siteConfig.title}`,
   },
   description: siteConfig.description,
-  alternates: {
-    canonical: siteConfig.url,
-  },
+  // Per-page canonical is set via createPageMetadata (do not default to home here).
   manifest: "/manifest.json",
   icons: {
     icon: [
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    url: siteConfig.url,
+    url: `${origin}/`,
     siteName: siteConfig.title,
     title: siteConfig.title,
     description: siteConfig.description,

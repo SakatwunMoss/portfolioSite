@@ -4,12 +4,23 @@ import { siteConfig } from "@/lib/site";
 
 export const OG_IMAGE_PATH = "/images/ogp.jpg";
 
+/** Apex origin without trailing slash (e.g. https://sakatwun.com). */
+export function siteOrigin(): string {
+  return siteConfig.url.replace(/\/+$/, "");
+}
+
+/**
+ * Absolute canonical URL with trailing slash (matches next.config trailingSlash).
+ * Home → https://sakatwun.com/
+ * Other → https://sakatwun.com/works/
+ */
 export function pageUrl(path: string): string {
+  const origin = siteOrigin();
   if (path === "/") {
-    return siteConfig.url;
+    return `${origin}/`;
   }
   const normalized = path.endsWith("/") ? path : `${path}/`;
-  return `${siteConfig.url}${normalized}`;
+  return `${origin}${normalized}`;
 }
 
 type PageMetadataOptions = {

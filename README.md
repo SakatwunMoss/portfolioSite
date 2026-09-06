@@ -69,13 +69,15 @@ npm run deploy
 2. 「Create Token」→ 「Edit Cloudflare Workers」テンプレートを使用
 3. 対象アカウントを選択して発行
 
-## カスタムドメイン
+## カスタムドメイン / URL 正規化
 
 `wrangler.toml` に `sakatwun.com` / `www.sakatwun.com` を設定済みです。
+`worker.ts` が `www` および `http` を `https://sakatwun.com` へ 301 リダイレクトします。
 
 1. お名前.com の NS を Cloudflare のものに変更
 2. `npm run deploy` または `main` へ push
-3. Cloudflare Dashboard → Workers & Pages → `sakatwun-portfolio` でドメインが Active になることを確認
+3. Cloudflare Dashboard → Workers & Pages → `portfoliosite` でドメインが Active になることを確認
+4. （推奨）SSL/TLS → **Always Use HTTPS** をオン（http→https の二重防御）
 
 ## ページ構成
 
