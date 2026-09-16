@@ -18,7 +18,7 @@ export default function MusicPage() {
         as="h1"
         label="Music"
         title="配信楽曲"
-        description="各曲は nodee または LinkCore の埋め込みプレイヤーで試聴できます。配信プラットフォームへのリンクもまとめて確認できます。"
+        description="Sakatwun Da M.I.C. として制作・配信しているオリジナル楽曲の一覧です。ヒップホップを軸に、ボードゲームやキャンプなど日常のモチーフを取り入れたトラックを公開しています。各曲は nodee または LinkCore の埋め込みプレイヤーで試聴でき、配信プラットフォームへのリンクもまとめて確認できます。"
       />
       <div className="grid gap-12">
         {tracks.map((track) => (

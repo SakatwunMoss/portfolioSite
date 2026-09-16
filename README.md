@@ -72,7 +72,8 @@ npm run deploy
 ## カスタムドメイン / URL 正規化
 
 `wrangler.toml` に `sakatwun.com` / `www.sakatwun.com` を設定済みです。
-`worker.ts` が `www` および `http` を `https://sakatwun.com` へ 301 リダイレクトします。
+`worker.ts` が `www` / `http` / trailing-slash 無し / `*/index.html` を
+canonical（`https://sakatwun.com/.../`）へ **1回の301** で正規化します。
 
 1. お名前.com の NS を Cloudflare のものに変更
 2. `npm run deploy` または `main` へ push

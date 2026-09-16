@@ -8,6 +8,20 @@ export function Footer() {
         <p className="text-sm text-ink-muted">
           © {new Date().getFullYear()} {siteConfig.author.name}
         </p>
+        <nav
+          aria-label="フッターナビ"
+          className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-ink-muted"
+        >
+          {siteConfig.nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition hover:text-ink"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
         <Link
           href={siteConfig.xUrl}
           target="_blank"

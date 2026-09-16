@@ -17,6 +17,7 @@ custom_domain = true
 directory = "./out"
 binding = "ASSETS"
 not_found_handling = "404-page"
-html_handling = "auto-trailing-slash"
-# www / http 正規化のため、アセット配信より先に Worker を実行する
+# Next trailingSlash に合わせる。スラッシュ正規化の301は worker.ts 側で先に行う
+html_handling = "force-trailing-slash"
+# www / http / trailing-slash 正規化のため、アセット配信より先に Worker を実行する
 run_worker_first = true

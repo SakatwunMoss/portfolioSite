@@ -17,6 +17,9 @@ export function MusicCard({ track }: { track: Track }) {
         <div className="min-w-0 pt-1">
           <h3 className="text-lg font-semibold text-ink">{track.titleJa}</h3>
           <p className="mt-0.5 text-sm text-ink-muted">{track.titleEn}</p>
+          <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+            {track.description}
+          </p>
           <Link
             href={track.shareUrl}
             target="_blank"
