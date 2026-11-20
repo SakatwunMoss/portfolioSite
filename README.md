@@ -83,6 +83,6 @@ canonical（`https://sakatwun.com/.../`）へ **1回の301** で正規化しま�
 ## ページ構成
 
 - `/` — Home（ヒーロー、Music/Works プレビュー）
-- `/music/` — 配信楽曲7曲（nodee / LinkCore 埋め込みプレイヤー）
+- `/music/` — 配信楽曲8曲（nodee / LinkCore 埋め込みプレイヤー）
 - `/works/` — Web制作実績3件
 - `/about/` — プロフィール・スキル・X 連絡先

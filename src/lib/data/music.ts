@@ -23,6 +23,18 @@ export const tracks: Track[] = [
     platform: "linkcore",
   },
   {
+    id: "vn3q5rkvc15i",
+    titleJa: "CAMP IN CEBU",
+    titleEn: "CAMP IN CEBU",
+    description:
+      "ドラムを主役に据えたパーカッシブなトラック。何層にも重ねたリズムが生むグルーヴで、セブの開放的な空気感を描いています。",
+    embedUrl: "https://n0.com/embed/a/vn3q5rkvc15i",
+    shareUrl: "https://nodee.net/a/vn3q5rkvc15i",
+    artworkUrl:
+      "https://d9rd7e11a18ii.cloudfront.net/albums/169/68169_20261121083044_400_400.jpg",
+    platform: "nodee",
+  },
+  {
     id: "5qc0czt898va",
     titleJa: "再生すると魔除けする曲",
     titleEn: "A Song That Wards Off Evil When Played",

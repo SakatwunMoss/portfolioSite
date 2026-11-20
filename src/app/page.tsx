@@ -61,7 +61,7 @@ export default function HomePage() {
           description="nodee / LinkCore 経由で配信中の楽曲です。"
         />
         <div className="grid gap-10 md:grid-cols-2">
-          {tracks.slice(0, 2).map((track) => (
+          {tracks.slice(0, 3).map((track) => (
             <MusicCard key={track.id} track={track} />
           ))}
         </div>
